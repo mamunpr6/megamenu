@@ -1,37 +1,49 @@
-.container {
+.rex-container {
   max-width: 1310px;
   padding: 0 15px;
   margin-left: auto;
   margin-right: auto;
 }
 
-ul.navbar-nav {
+.rex-navbar-wrapper {
+  position: relative;
+}
+
+ul.rex-navbar-nav {
   list-style: none;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 36px;
-  position: relative;
+  margin: 0;
+  padding: 0;
 }
 
-a.nav-link {
+.rex-navbar-nav > li > a:hover {
+  color: #201cfe;
+}
+
+a.rex-nav-link {
   font-size: 18px;
   display: inline-block;
   text-decoration: none;
   font-family: "Poppins";
   color: #64687f;
+  padding: 25px 5px;
 }
 
-.dropdown-container:hover {
+.rex-mega-dropdown-container:hover .rex-megamenu-container {
+  opacity: 1;
+  visibility: visible;
 }
 
-.megamenu-container {
+.rex-megamenu-container {
   position: absolute;
-  /* display: none; */
-  left: 50%;
-  top: 230px;
-  transform: translate(-50%, -50%);
-  width: 1310px;
+  /* opacity: 0; */
+  /* visibility: hidden; */
+  width: calc(100% - 30px);
+  left: 0;
+  margin: 0 15px;
   background-color: lightcoral;
   border-radius: 0px 0px 20px 20px;
   background: linear-gradient(
@@ -44,50 +56,43 @@ a.nav-link {
   border-top: 2px solid #201cfe;
   box-shadow: 0px 1px 2px rgba(15, 14, 108, 0.05),
     0px 60px 100px rgba(15, 14, 108, 0.3);
-  z-index: 1;
+  z-index: 2;
+  transition: all 0.3s linear;
 }
 
-.megamenu-container::before {
-  content: "";
-  width: 25px;
-  height: 25px;
-  position: absolute;
-  background-color: #201cfe;
-  display: inline-block;
-  transform: rotate(45deg);
-  z-index: 0;
-  top: 45px;
-  margin-left: 28px;
-}
-
-.megamenu {
+.rex-megamenu {
   padding: 40px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 
-.product {
+.rex-megamenu-item {
   padding: 15px;
   display: flex;
   align-items: start;
   justify-content: center;
   gap: 15px;
   border-radius: 10px;
+  text-decoration: none;
   transition: all 0.3s ease;
 }
 
-.product:hover {
+.rex-megamenu-item:hover {
   background: #ffffff;
   box-shadow: 0px 1px 2px rgba(32, 28, 254, 0.1);
   cursor: pointer;
 }
 
-.product:hover h3 {
+.rex-megamenu-item:hover h3 {
   color: #201cfe;
 }
 
-.product h3 {
+.rex-megamenu-item:hover figure img {
+  background-color: #e9e9ff;
+}
+
+.rex-megamenu-item h3 {
   font-size: 16px;
   font-weight: 600;
   font-family: "Poppins";
@@ -96,20 +101,109 @@ a.nav-link {
   margin: 0;
 }
 
-.product p {
+.rex-megamenu-item p {
   font-size: 16px;
   font-family: "lato";
   font-weight: 400;
-  margin: 0;
+  margin: 5px 0 0 0;
   color: #6f7681;
   line-height: 1.625;
 }
 
-.product figure {
+.rex-megamenu-item figure {
   margin: 0;
   padding: 0;
 }
 
-.product figure img {
-  max-width: 49px;
+.rex-megamenu-item figure img {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.rex-megamenu-item figure img {
+  max-width: 41px;
+}
+
+.rex-megamenu-footer {
+  background: rgba(255, 255, 255, 0.5);
+  border-top: 1px solid #afe7ff;
+  border-radius: 0px 0px 20px;
+  padding: 22px 15px;
+  border-radius: 0px 0px 20px 20px;
+}
+
+.rex-megamenu-footer-content a {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: "Lato";
+  font-size: 16px;
+  line-height: 1.625;
+  text-transform: uppercase;
+  color: #201cfe;
+}
+
+/* RexTheme megamenu responsiveness */
+
+@media (max-width: 1400px) {
+  .rex-container {
+    max-width: 1310px;
+  }
+}
+
+@media (max-width: 1399px) {
+  .rex-container {
+    max-width: 1140px;
+  }
+
+  .rex-megamenu {
+    padding: 30px;
+    gap: 20px;
+  }
+
+  .rex-megamenu-footer {
+    padding: 18px 15px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .rex-megamenu-item {
+    padding: 10px;
+  }
+
+  .rex-megamenu {
+    padding: 20px;
+    gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .rex-megamenu-footer {
+    padding: 16px 15px;
+  }
+}
+
+@media (max-width: 991px) {
+  .rex-container {
+    max-width: 960px;
+  }
+
+  .rex-megamenu {
+    padding: 15px;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .rex-container {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 576px) {
+  .rex-container {
+    max-width: 540px;
+  }
 }

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RexTheme Navbar</title>
+    <title>RexTheme rex-navbar</title>
     <link rel="stylesheet" href="styles/style.css">
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,20 +19,20 @@
 
 <body>
 
-    <nav class="navbar">
-        <div class="container">
-            <div class="navbar-wrapper">
-                <div class="navbar-collapse">
-                    <ul class="navbar-nav">
+    <nav class="rex-navbar">
+        <div class="rex-container">
+            <div class="rex-navbar-wrapper">
+                <div class="rex-navbar-collapse">
+                    <ul class="rex-navbar-nav">
                         <li>
-                            <a href="#" title="Home" class="nav-link">Home</a>
+                            <a href="#" title="Home" class="rex-nav-link">Home</a>
                         </li>
-                        <li class="dropdown-container">
-                            <a href="#" title="Products" class="nav-link">Products</a>
-                            <div class="megamenu-container">
-                                <div class="megamenu">
-                                    <!-- product 1 -->
-                                    <div class="product">
+                        <li class="rex-mega-dropdown-container">
+                            <a href="#" title="Products" class="rex-nav-link">Products</a>
+                            <div class="rex-megamenu-container">
+                                <div class="rex-megamenu">
+                                    <!-- rex-megamenu-item 1 -->
+                                    <a href="#" class="rex-megamenu-item">
                                         <div>
                                             <figure>
                                                 <img src="./assets/wpvr.webp" alt="WPVR">
@@ -43,12 +43,12 @@
                                             <p>Create stunning virtual tours easily, on your own, using 360 Panoramas.
                                             </p>
                                         </div>
-                                    </div>
-                                    <!-- product 2 -->
-                                    <div class="product">
+                                    </a>
+                                    <!-- rex-megamenu-item 2 -->
+                                    <a href="#" class="rex-megamenu-item">
                                         <div>
                                             <figure>
-                                                <img src="./assets/pfm.webp" alt="WPVR">
+                                                <img src="./assets/pfm.webp" alt="Product Feed Manager For WooCommerce">
                                             </figure>
                                         </div>
                                         <div>
@@ -56,12 +56,13 @@
                                             <p>Maximize Sales With The Largest Marketplaces
                                             </p>
                                         </div>
-                                    </div>
-                                    <!-- product 3 -->
-                                    <div class="product">
+                                    </a>
+                                    <!-- rex-megamenu-item 3 -->
+                                    <a href="#" class="rex-megamenu-item">
                                         <div>
                                             <figure>
-                                                <img src="./assets/cart-lift.webp" alt="WPVR">
+                                                <img src="./assets/cart-lift.webp"
+                                                    alt="Cart Lift To Recover Abandoned Carts">
                                             </figure>
                                         </div>
                                         <div>
@@ -69,12 +70,13 @@
                                             <p>Recover abandoned carts for your WooCommerce Store easily.
                                             </p>
                                         </div>
-                                    </div>
-                                    <!-- product 4 -->
-                                    <div class="product">
+                                    </a>
+                                    <!-- rex-megamenu-item 4 -->
+                                    <a href="#" class="rex-megamenu-item">
                                         <div>
                                             <figure>
-                                                <img src="./assets/product-recommendation.webp" alt="WPVR">
+                                                <img src="./assets/product-recommendation.webp"
+                                                    alt="Product Recommendations for WooCommerce">
                                             </figure>
                                         </div>
                                         <div>
@@ -82,12 +84,13 @@
                                             <p>Improve the shopping experience across your entire store.
                                             </p>
                                         </div>
-                                    </div>
-                                    <!-- product 5 -->
-                                    <div class="product">
+                                    </a>
+                                    <!-- rex-megamenu-item 5 -->
+                                    <a href="#" class="rex-megamenu-item">
                                         <div>
                                             <figure>
-                                                <img src="./assets/dynamic-discount.webp" alt="WPVR">
+                                                <img src="./assets/dynamic-discount.webp"
+                                                    alt="Dynamic Discount for WooCommerce">
                                             </figure>
                                         </div>
                                         <div>
@@ -95,12 +98,12 @@
                                             <p>Boost your AOV significantly with custom dynamic discount offers.
                                             </p>
                                         </div>
-                                    </div>
-                                    <!-- product 6 -->
-                                    <div class="product">
+                                    </a>
+                                    <!-- rex-megamenu-item 6 -->
+                                    <a href="#" class="rex-megamenu-item">
                                         <div>
                                             <figure>
-                                                <img src="./assets/checkoutify.webp" alt="WPVR">
+                                                <img src="./assets/checkoutify.webp" alt="Checkoutify">
                                             </figure>
                                         </div>
                                         <div>
@@ -108,21 +111,36 @@
                                             <p>The Ultimate WooCommerce Checkout Customizer
                                             </p>
                                         </div>
+                                    </a>
+                                </div>
+                                <div class="rex-megamenu-footer">
+                                    <div class="rex-megamenu-footer-content">
+                                        <a href="#">View All Plugins
+                                            <svg width="19" height="18" viewBox="0 0 19 18" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M17.8538 8.81421L1.16049 8.87705" stroke="#201CFE"
+                                                    stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M12.8319 13.8183L17.8537 8.81055L12.8286 3.77196"
+                                                    stroke="#201CFE" stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </li>
                         <li>
-                            <a href="#" title="Support" class="nav-link">Support</a>
+                            <a href="#" title="Support" class="rex-nav-link">Support</a>
                         </li>
                         <li>
-                            <a href="#" title="Blog" class="nav-link">Blog</a>
+                            <a href="#" title="Blog" class="rex-nav-link">Blog</a>
                         </li>
                         <li>
-                            <a href="#" title="Pricing" class="nav-link">Pricing</a>
+                            <a href="#" title="Pricing" class="rex-nav-link">Pricing</a>
                         </li>
                         <li>
-                            <a href="#" title="Account" class="nav-link">Account</a>
+                            <a href="#" title="Account" class="rex-nav-link">Account</a>
                         </li>
                     </ul>
                 </div>
